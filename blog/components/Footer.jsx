@@ -1,8 +1,11 @@
 import React from "react";
-
+import { SiFacebook } from "react-icons/Si";
+import { RiInstagramFill } from "react-icons/ri";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { ImLinkedin } from "react-icons/im";
 const Footer = () => {
   return (
-    <div className="mb-24">
+    <div className="mb-24 flex flex-col gap-12 bg-slate-200 p-8">
       <div className="flex justify-evenly">
         <div>
           <h2>About</h2>
@@ -21,18 +24,24 @@ const Footer = () => {
           <h2>Contact</h2>
         </div>
         <div className="flex gap-2">
-          <img src="public/facebook.svg" />
-          <img src="picture/instagramm.svg" />
-          <img src="picture/twitter.svg" />
-          <img src="picture/linkedin.svg" />
+          <SiFacebook />
+          <RiInstagramFill />
+          <AiFillTwitterCircle />
+          <ImLinkedin />
         </div>
       </div>
-      <div className="ml-[380px]">
+      <div className="m-auto">
         <h2>Email: Otgoohghg@yahoo.com</h2>
         <h2>Phone: 01023019686</h2>
       </div>
       <div className="flex justify-around">
-        <img src="picture/Logo.png" />
+        <div className="flex">
+          <img src="Logo1.png" />
+          <div className="">
+            <h1>MetaBlog</h1>
+            <h2>© All Rights Reserved.</h2>
+          </div>
+        </div>
         <div className="flex gap-4">
           <h2>Terms of Use</h2>
           <h2>Privacy Policy</h2>

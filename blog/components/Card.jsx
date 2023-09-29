@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ blog }) => {
-  console.log(blog);
   return (
     <div className="border flex flex-col rounded-2xl ">
       <img className="w-[100%] h-[50%] rounded-t-2xl" src={blog.cover_image} />

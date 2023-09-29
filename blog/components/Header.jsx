@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="flex justify-around mt-12">
-      <img src="@public/Logo.png" />
+      <img src="Logo.png" />
       <div className="flex gap-[60px]">
         <h1>HOME</h1>
         <h1>BLOG</h1>
