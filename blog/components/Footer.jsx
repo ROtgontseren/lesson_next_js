@@ -5,8 +5,9 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { ImLinkedin } from "react-icons/im";
 const Footer = () => {
   return (
-    <div className="mb-24 flex flex-col gap-12 bg-slate-200 p-8">
-      <div className="flex justify-evenly">
+    <div className="grid justify-center bg-slate-100">
+     <div className="mb-24 flex flex-col gap-12 w-[3000px]">
+      <div className="flex justify-evenly mt-12">
         <div>
           <h2>About</h2>
           <h3>
@@ -17,6 +18,8 @@ const Footer = () => {
             ut labore et dolore magna aliqua. <br />
             Ut enim ad minim veniam
           </h3>
+          <h2 className="mt-8">Email: Otgoohghg@yahoo.com</h2>
+          <h2>Phone: 01023019686</h2>
         </div>
         <div>
           <h2>Home</h2>
@@ -30,14 +33,10 @@ const Footer = () => {
           <ImLinkedin />
         </div>
       </div>
-      <div className="m-auto">
-        <h2>Email: Otgoohghg@yahoo.com</h2>
-        <h2>Phone: 01023019686</h2>
-      </div>
-      <div className="flex justify-around">
+      <div className="flex mb-12 justify-around mx-16">
         <div className="flex">
           <img src="Logo1.png" />
-          <div className="">
+          <div className="p-2">
             <h1>MetaBlog</h1>
             <h2>© All Rights Reserved.</h2>
           </div>
@@ -48,6 +47,7 @@ const Footer = () => {
           <h2>Cookie Policy</h2>
         </div>
       </div>
+     </div> 
     </div>
   );
 };
