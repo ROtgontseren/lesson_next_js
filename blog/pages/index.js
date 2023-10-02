@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className='container mx-auto mt-12'>
        <Container/>    
-       <h2>All Blog Post</h2>
+       <h2 className='font-bold text-2xl'>All Blog Post</h2>
        <div className="grid grid-cols-3 gap-16 mx-12 my-12">
            {blogs.map((blog, i) => {
             return <Card blog={blog}/>

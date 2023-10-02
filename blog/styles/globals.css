@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.blog-content p {
+    padding: 20px;
+    @apply my-4;
+}
+.blog-content h2 {
+    @apply font-semibold text-2xl
+}
+.blog-content h4 {
+    @apply text-2xl font-semibold
+}
