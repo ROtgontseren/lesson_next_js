@@ -3,10 +3,12 @@ import { SiFacebook } from "react-icons/Si";
 import { RiInstagramFill } from "react-icons/ri";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { ImLinkedin } from "react-icons/im";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="grid justify-center bg-slate-100">
-      <div className="mb-24 flex flex-col gap-12 w-[3000px]">
+      <div className="mb-12 flex flex-col gap-12 w-[3000px]">
         <div className="flex justify-evenly mt-12">
           <div>
             <h2 className="font-bold text-xl">About</h2>
@@ -22,11 +24,15 @@ const Footer = () => {
             <h2>Phone: Phone : 880 123 456 789</h2>
           </div>
           <div>
-            <h2>Home</h2>
+            <Link href={"../"}>
+              <h2>Home</h2>
+            </Link>
             <h2>Blog</h2>
-            <h2>Contact</h2>
+            <Link href={"./contact"}>
+              <h2>Contact</h2>
+            </Link>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 cursor-pointer">
             <SiFacebook />
             <RiInstagramFill />
             <AiFillTwitterCircle />

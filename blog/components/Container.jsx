@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import Word from "./Word";
+import Link from "next/link";
 
 const Container = () => {
   const [words, setWords] = useState([]);
