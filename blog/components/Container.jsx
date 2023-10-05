@@ -20,16 +20,16 @@ const Container = () => {
       <div className="grid justify-center">
         <div className="grid grid-cols-2 gap-4">
           {words.map((word, i) => {
-            return (
+            return (<Link href={"/blog/" + word.id}>
               <div className="w-[680px] h-[450px] m-auto">
                 <div className="gap-6 mt-6">
-                  <img className="rounded-xl" src={word.cover_image} />
+                  <img className="rounded-xl" src={word.social_image} />
                   <div className="p-6">
                     <span className="font-bold text-xl">{word?.type_of}</span>
                     <h2>{word.title}</h2>
                   </div>
                 </div>
-              </div>
+              </div></Link>
             );
           })}
           <div className="w-[780px] h-[450px] m-auto">
@@ -47,19 +47,19 @@ const Container = () => {
         </div>
         <div>
           {words.map((word, i) => {
-            return (
+            return (<Link href={"/blog/" + word.id}>
               <div className="w-[1450px] h-[246px] m-auto my-12">
                 <div className="mt-6 flex">
                   <img
                     className="w-[680px] h-[246px] rounded-xl"
-                    src={word.cover_image}
+                    src={word.social_image}
                   />
                   <div className="p-6">
                     <span className="font-bold text-xl">{word?.type_of}</span>
                     <h2>{word.title}</h2>
                   </div>
                 </div>
-              </div>
+              </div></Link>
             );
           })}
         </div>

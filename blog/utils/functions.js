@@ -1,11 +1,6 @@
-import React from 'react'
+import moment from "moment";
 
-const functions = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default functions;
+export const formatDate = (dateStr) => {
+  const dt = moment(dateStr).format("yyyy-MM-DD");
+  return dt;
+};
