@@ -1,42 +1,55 @@
-import React from 'react'
-import { useState,useEffect } from 'react';
-import Link from 'next/link';
-import Card from '@/components/Card';
-import Button from '@/components/Button';
-import Loader from '@/components/Loader';
+import React from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Card from "@/components/Card";
+import Loader from "@/components/Loader";
 
 const recentblog = () => {
-    const [blogs,setBlogs]= useState([]);  
-    const [isLoading, setLoading] = useState(true)
- 
-     useEffect(() => {
-        fetchData();
-  }, [])
- const fetchData = async () => {
-     const res = await fetch("https://dev.to/api/articles?per_page=9");
-     const data = await res.json();
-     console.log(data);
-     setBlogs(data);
-     setLoading(false)
- }
+  const [blogs, setBlogs] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [pages, setPages] = useState(9);
+
+  useEffect(() => {
+    fetchData();
+  }, [pages]);
+
+  function Handleclick() {
+    setPages(pages + 3);
+  }
+  console.log("hand", pages);
+
+  const fetchData = async () => {
+    const res = await fetch(`https://dev.to/api/articles?per_page=${pages}`);
+    const data = await res.json();
+    console.log(data);
+    setBlogs(data);
+    setLoading(false);
+  };
   return (
     <div>
-      <Link href={"./blog"} > <div className='container mx-auto mt-12'>
-       <h2 className='font-bold text-2xl'>All Blog Post</h2>
-       {isLoading && <Loader />}
-       {!isLoading && (
-          <div className="grid grid-cols-3 gap-3 justify-center">
-          </div>
-        )}
-       <div className="grid grid-cols-3 gap-16 mx-12 my-12">
-           {blogs.map((blog, i) => {
-            return <Card blog={blog}/>
+      <h2 className="font-bold text-2xl m-auto">All Blog Post</h2>
+      <Link href={"./blog"}>
+        {" "}
+        <div className="container mx-auto mt-12">
+          {isLoading && <Loader />}
+          {!isLoading && <div className="grid justify-center"></div>}
+          <div className="sm:grid grid-cols-1 gap-16 mx-12 my-12 lg:grid-cols-2 2xl:grid-cols-3">
+            {blogs.map((blog, i) => {
+              return <Card blog={blog} />;
             })}
-       </div>
-       </div></Link>
-       <Button/>
+          </div>
+        </div>
+      </Link>
+      <div className="flex justify-center mb-24">
+        <button
+          className="border text-black border-slate-200 w-36 h-14 rounded-xl hover:bg-blue-400 hover:text-white hover:scale-105 "
+          onClick={Handleclick}
+        >
+          Load More ...
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default recentblog;

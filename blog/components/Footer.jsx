@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="grid justify-center bg-slate-100">
-      <div className="mb-12 flex flex-col gap-12 w-[3000px]">
-        <div className="flex justify-evenly mt-12">
+    <div className="grid justify-center bg-slate-100 ">
+      <div className="mb-12 flex flex-col gap-12 w-screen justify-evenly">
+        <div className="sm:grid grid-rows-1 gap-16 lg:grid-cols-2 px-36 2xl:flex justify-evenly mt-12">
           <div>
             <h2 className="font-bold text-xl">About</h2>
             <h3>
@@ -25,11 +25,13 @@ const Footer = () => {
           </div>
           <div>
             <Link href={"../"}>
-              <h2>Home</h2>
+              <h2 className="font-semibold">Home</h2>
             </Link>
-            <Link href={"../blog"}><h2>Blog</h2></Link>
+            <Link href={"../blog"}>
+              <h2 className="font-semibold">Blog</h2>
+            </Link>
             <Link href={"../contact"}>
-              <h2>Contact</h2>
+              <h2 className="font-semibold">Contact</h2>
             </Link>
           </div>
           <div className="flex gap-2 cursor-pointer">
@@ -39,7 +41,7 @@ const Footer = () => {
             <ImLinkedin />
           </div>
         </div>
-        <div className="flex mb-12 justify-around mx-16">
+        <div className="sm:grid grid-rows-1 gap-8 lg:grid-cols-2 2xl:flex mb-12 justify-around mx-16">
           <div className="flex">
             <img src="Logo1.png" />
             <div className="p-2">
