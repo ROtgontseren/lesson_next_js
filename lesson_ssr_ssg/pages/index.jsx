@@ -1,20 +1,18 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Container from "@/components/Container";
-import Recentblog from "./Recentblog";
 import Card from "@/components/Card";
 
 export default function Home({ blogs }) {
   return (
     <main className="container mx-auto mt-12">
       <Container />
-      <Recentblog />
-      {/* <div>
+      <div>
         <h2 className="font-bold text-2xl m-auto">All Blog Post</h2>
 
         <div className="container mx-auto mt-12">
-          {isLoading && <Loader />}
-          {!isLoading && <div className="grid justify-center"></div>}
+          {/* {isLoading && <Loader />}
+          {!isLoading && <div className="grid justify-center"></div>} */}
           <div className="sm:grid grid-cols-1 gap-16 mx-12 my-12 lg:grid-cols-2 2xl:grid-cols-3">
             {blogs.map((blog, i) => {
               return <Card blog={blog} />;
@@ -30,17 +28,17 @@ export default function Home({ blogs }) {
             Load More ...
           </button>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }
-// export async function getStaticProps() {
-//   const res = await fetch(`https://dev.to/api/articles?per_pages=9`);
-//   const blogs = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(`https://dev.to/api/articles?per_pages=3`);
+  const blogs = await res.json();
 
-//   return {
-//     props: {
-//       blogs,
-//     },
-//   };
-// }
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
