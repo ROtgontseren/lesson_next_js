@@ -17,12 +17,12 @@ const Container = () => {
   return (
     <div>
       <h2 className="font-bold text-2xl">Recent blog posts</h2>
-      <div className="sm:grid 2xl:justify-center">
-        <div className="sm:grid grid-row  2xl:grid-cols-2 gap-4">
+      <div className="sm:w-screen flex flex-col 2xl:w-[2000px] justify-center">
+        <div className="sm:w-3/4 2xl:flex gap-4">
           {words.map((word, i) => {
             return (
-              <Link href={"/blog/" + word.id}>
-                <div className="w-[680px] h-[450px] m-auto">
+              <Link href={"/blog/" + word.id} className="w-2/4">
+                <div className=" w-2/4 m-auto">
                   <div className="gap-6 mt-6">
                     <img className="rounded-xl" src={word.social_image} />
                     <div className="p-6">
@@ -34,7 +34,7 @@ const Container = () => {
               </Link>
             );
           })}
-          <div className="w-[780px] h-[450px] m-auto">
+          <div className="w-2/4 h-[450px] m-auto">
             <div className="">
               {words.map((word, i) => {
                 return <Word word={word} />;
@@ -47,14 +47,17 @@ const Container = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="sm:w-3/4 justify-center 2xl:justify-start">
           {words.map((word, i) => {
             return (
-              <Link href={"/blog/" + word.id}>
-                <div className="w-[1450px] h-[246px] m-auto my-12">
+              <Link
+                href={"/blog/" + word.id}
+                className="sm:flex justify-end 2xl:justify-evenly"
+              >
+                <div className="w-3/4 my-12">
                   <div className="sm:grid grid-cols-2 mx-auto lg:grid-cols-2 2xl:mt-6 flex">
                     <img
-                      className="w-[680px] h-[246px] rounded-xl"
+                      className="w-[100%] h-[246px] rounded-xl"
                       src={word.social_image}
                     />
                     <div className="p-6">

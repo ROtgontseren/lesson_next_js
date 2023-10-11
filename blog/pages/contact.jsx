@@ -3,7 +3,7 @@ import React from "react";
 const contact = () => {
   return (
     <div className="grid justify-center mt-[100px]">
-      <div className="sm:m-auto w-2/4 md:w-2/4 2xl:w-2/4 p-6">
+      <div className="sm:m-auto w-2/4 md:w-2/4 2xl:w-[1000px] p-6">
         <h1 className="sm:px-12 2xl:font-semibold text-4xl ">Contact Us</h1>
         <h2 className="sm:px-12 2xl:text-2xl mt-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

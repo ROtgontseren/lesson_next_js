@@ -20,8 +20,12 @@ const Footer = () => {
               ut labore et dolore magna aliqua. <br />
               Ut enim ad minim veniam
             </h3>
-            <h2 className="mt-8 ">Email: info@jstemplate.net</h2>
-            <h2>Phone: Phone : 880 123 456 789</h2>
+            <h2 className="mt-8 ">
+              <span className="font-bold">Email:</span> info@jstemplate.net
+            </h2>
+            <h2>
+              <span className="font-bold">Phone:</span> Phone : 880 123 456 789
+            </h2>
           </div>
           <div>
             <Link href={"../"}>
@@ -45,7 +49,9 @@ const Footer = () => {
           <div className="flex">
             <img src="Logo1.png" />
             <div className="p-2">
-              <h1>MetaBlog</h1>
+              <h1>
+                Meta<span className="font-bold">Blog</span>
+              </h1>
               <h2>© All Rights Reserved.</h2>
             </div>
           </div>
