@@ -1,5 +1,5 @@
 import React from "react";
-import { SiFacebook } from "react-icons/Si";
+import { SiFacebook } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { ImLinkedin } from "react-icons/im";
