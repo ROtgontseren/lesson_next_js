@@ -1,14 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Container from "@/components/Container";
-import Recentblog from "./Recentblog";
 import Card from "@/components/Card";
+import { useState } from "react";
 
 export default function Home({ blogs }) {
   return (
     <main className="container mx-auto mt-12">
       <Container />
-      <div>
+      <div className="container mx-auto">
         <h2 className="font-bold text-2xl m-auto">All Blog Post</h2>
 
         <div className="container mx-auto mt-12">
@@ -34,7 +32,7 @@ export default function Home({ blogs }) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch(`https://dev.to/api/articles?per_pages=9`);
+  const res = await fetch(`https://dev.to/api/articles?per_page=9`);
   const blogs = await res.json();
 
   return {
