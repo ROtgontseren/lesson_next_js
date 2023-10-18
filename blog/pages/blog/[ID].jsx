@@ -50,7 +50,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(id) {
   const res = await fetch(`https://dev.to/api/articles?per_pages=9`);
   const articles = await res.json();
   const ids = articles.map((article) => article.id);
