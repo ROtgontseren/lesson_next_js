@@ -14,7 +14,7 @@ export default function Home({ blogs }) {
           {!isLoading && <div className="grid justify-center"></div>} */}
           <div className="sm:grid grid-cols-1 gap-16 mx-12 my-12 lg:grid-cols-2 2xl:grid-cols-3">
             {blogs.map((blog, i) => {
-              return <Card blog={blog} />;
+              return <Card key={i} blog={blog} />;
             })}
           </div>
         </div>

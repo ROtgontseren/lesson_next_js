@@ -17,7 +17,7 @@ const Container = () => {
   return (
     <div>
       <h2 className="font-bold text-2xl">Recent blog posts</h2>
-      <div className="sm:w-screen flex flex-col 2xl:w-[2000px] justify-center">
+      <div className="max-sm:w-screen flex flex-col 2xl:w-[2000px] justify-center">
         <div className="sm:w-3/4 2xl:flex gap-4">
           {words.map((word, i) => {
             return (
@@ -37,12 +37,12 @@ const Container = () => {
           <div className="w-2/4 h-[450px] m-auto">
             <div className="">
               {words.map((word, i) => {
-                return <Word word={word} />;
+                return <Word key={i} word={word} />;
               })}
             </div>
             <div className="mt-12">
               {words.map((word, i) => {
-                return <Word word={word} />;
+                return <Word key={i} word={word} />;
               })}
             </div>
           </div>

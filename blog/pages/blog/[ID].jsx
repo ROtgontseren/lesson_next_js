@@ -4,7 +4,7 @@ import { formatDate } from "/utils/functions";
 
 const BlogDetail = ({ article }) => {
   return (
-    <div className="sm:px-16 2xl:container mx-auto mt-24 max-w-4xl">
+    <div className="max-sm:px-16 2xl:container mx-auto mt-24 max-w-4xl">
       <div>
         <div>
           <h1 className="text-4xl font-semibold text-slate-900 ">
@@ -22,7 +22,7 @@ const BlogDetail = ({ article }) => {
               </h4>
             </div>
             <p className="text-lg text-gray-500">
-              {/* {formatDate(blogDetailData.created_at)} */}
+              {/* {formatDate(artilce.created_at)} */}
             </p>
             <h5></h5>
           </div>

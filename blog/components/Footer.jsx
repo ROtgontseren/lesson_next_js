@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="grid justify-center bg-slate-100 ">
       <div className="mb-12 flex flex-col gap-12 w-screen justify-evenly">
-        <div className="sm:grid grid-rows-1 gap-16 lg:grid-cols-2 px-36 2xl:flex justify-evenly mt-12">
+        <div className="max-sm:grid grid-rows-1 gap-16 lg:grid-cols-2 px-36 2xl:flex justify-evenly mt-12">
           <div>
             <h2 className="font-bold text-xl">About</h2>
             <h3>

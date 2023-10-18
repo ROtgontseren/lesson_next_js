@@ -12,7 +12,6 @@ const Word = ({ word }) => {
             <h2>{word.title}</h2>
           </div>
         </div>
-        <div>2</div>
       </Link>
     </>
   );

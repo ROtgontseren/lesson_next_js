@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   return (
     <div className="grid justify-center mt-12 max">
-      <div className="sm:grid grid-rows-3 gap-6 lg:flex 2xl:w-screen justify-evenly">
+      <div className="max-sm:grid grid-rows-3 gap-6 sm:grid grid-rows-3,gap-6 lg:flex 2xl:w-screen justify-evenly">
         <Link href={"../"}>
           <img src="Logo.png" />{" "}
         </Link>
